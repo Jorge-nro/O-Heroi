@@ -1,0 +1,1208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.personagem {
+    position: relative;
+    width: 180px;
+    height: 320px;
+}
+
+.personagem.ferro .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 10px 10px 2px 2px;
+    background-color: gray;
+    border: 2px dashed lightgray;
+    box-shadow: inset -2px 2px 5px lightgrey,
+                inset 1px -1px 8px black,
+                0 2px 10px black;
+    top: 30px;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+.personagem.bronze .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 50px 50px 2px 2px;
+    background-color: rgb(163, 119, 25);
+    border: 2px solid rgb(231, 180, 12);
+    box-shadow: inset -2px 2px 5px rgb(236, 196, 108),
+                inset 1px -1px 8px black,
+                0 3px 5px black;
+    top: 30px;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+.personagem.prata .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 50px 80px 20px 2px;
+    background-color: rgb(167, 190, 190);
+    border: 2px solid rgb(224, 242, 243);
+    box-shadow: inset -2px 2px 5px lightgrey,
+                inset 1px -1px 8px black,
+                0 2px 10px black;
+    top: 30px;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+.personagem.ouro .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 50px 10px 2px 2px;
+    background-color: rgb(121, 126, 76);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 5px lightgrey,
+                inset 1px -1px 8px black,
+                0 2px 10px black;
+    top: 30px;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+.personagem.platina .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 50px 5px 5px 5px;
+    background-color: rgb(196, 240, 243);
+    border: 2px solid rgb(168, 255, 251);
+    box-shadow: inset -2px 2px 5px rgb(31, 248, 255),
+                inset 1px -1px 8px rgb(27, 88, 146),
+                0 2px 10px black;
+    top: 30px;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+.personagem.ascendente .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgb(251, 255, 0);
+    box-shadow: inset -2px 2px 5px rgb(231, 230, 134),
+                inset 1px -1px 8px black,
+                0 2px 10px rgb(255, 255, 255);
+    top: 10px;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+.personagem.imortal .capacete {
+    position: absolute;
+    width: 105px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px double rgb(255, 0, 0);
+    box-shadow: inset -2px 2px 5px rgb(233, 144, 28),
+                inset 1px -1px 8px rgb(235, 156, 38),
+                0 2px 10px black;
+    top: 0;
+    left: 38px;
+    z-index: 3;
+    animation: capacetem 1s ease infinite alternate;
+}
+
+
+.personagem.radiante .capacete {
+    position: absolute;
+    width: 105px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 5px lightgrey,
+                inset 1px -1px 8px rgb(255, 238, 0),
+                0 2px 10px rgb(151, 139, 139);
+    top: 30px;
+    left: 38px;
+    z-index: 6;
+
+}
+
+.personagem.radiante .capacete::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    border-radius: 0px 50px 2px 2px;
+    background-color: rgb(126, 2, 2);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 5px lightgrey,
+                inset 1px -1px 8px rgb(255, 238, 0),
+                0 2px 10px rgb(255, 255, 255);
+    top: -15px;
+    left: 68px;
+    z-index: 3;
+
+}
+
+.personagem.radiante .capacete::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    border-radius: 50px 0px 2px 2px;
+    background-color: rgb(126, 2, 2);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 5px lightgrey,
+                inset 1px -1px 8px rgb(255, 238, 0),
+                0 2px 10px rgb(255, 255, 255);
+    top: -15px;
+    left: 8px;
+    z-index: 3;
+
+}
+
+@keyframes capacetem {
+    50% {
+        transform: rotate(-6deg);
+        left: 34px;
+    }
+    100% {
+        transform: rotate(6deg);
+        left: 42px;
+    }
+}
+
+.cabeca {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    box-shadow: inset 0 0 10px gray;
+    border-radius: 30%;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    animation: cabecam 1s ease infinite alternate;
+}
+
+@keyframes cabecam {
+    50% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(6deg);
+    }
+}
+
+.olhoDireito, .olhoEsquerdo {
+    position: absolute;
+    width: 18px;
+    height: 0;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 40%;
+    top: 80px;
+    z-index: 4;
+}
+
+@keyframes olhom {
+    50% {
+        top: 84.5px;
+        height: 0;
+    }
+    100% {
+        top: 76.5px;
+    }
+}
+
+@keyframes olhom2 {
+    50% {
+        top: 76.5px;
+        height: 0;
+    }
+    100% {
+        top: 84.5px;
+    }
+}
+
+.olhoEsquerdo {
+    left: 55px;
+    animation: olhom 1s ease infinite alternate;
+}
+
+.olhoDireito {
+    left: 110px;
+    animation: olhom2 1s ease infinite alternate;
+}
+
+.olhoDireito::after, .olhoEsquerdo::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    animation: pulp 1s ease infinite alternate;
+}
+
+@keyframes pulp {
+    20% {
+        height: 0;
+    }
+    40% {
+        height: 10px;
+    }
+    70% {
+        height: 0;
+    }
+}
+
+.nariz {
+    position: absolute;
+    top: 100px;
+    left: 85px;
+    width: 12px;
+    height: 16px;
+    background-color: rgb(245, 215, 195);
+    border: 2px solid black;
+    border-radius: 40%;
+    z-index: 4;
+    animation: narizm 1s ease infinite alternate;
+}
+
+@keyframes narizm {
+    50% {
+        transform: rotate(-6deg);
+    }
+    100% {
+        transform: rotate(6deg);
+    }
+}
+
+.boca {
+    position: absolute;
+    top: 120px;
+    left: 65px;
+    width: 50px;
+    height: 8px;
+    border-radius: 0 0 40px 40px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: inset 0 3px 5px white;
+    z-index: 4;
+    animation: bocam 1s ease infinite alternate;
+}
+
+@keyframes bocam {
+    50% {
+        transform: rotate(-6deg);
+        left: 64px;
+    }
+    100% {
+        transform: rotate(6deg);
+        left: 62px;
+    }
+}
+
+.personagem.ferro .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: gray;
+    border: 2px dashed lightgray;
+    box-shadow: inset -2px 2px 10px lightgrey,
+                inset 1px -1px 15px black;
+    border-bottom: 40px solid rgb(119, 117, 117);
+    top: 140px;
+    left: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.personagem.bronze .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: rgb(163, 119, 25);
+    border: 2px solid rgb(231, 180, 12);
+    box-shadow: inset -2px 2px 5px rgb(236, 196, 108),
+                inset 1px -1px 8px rgb(68, 66, 66);
+    border-bottom: 40px solid rgb(143, 87, 15);
+    top: 140px;
+    left: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.personagem.prata .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: rgb(193, 204, 204);
+    border: 2px solid rgb(224, 242, 243);
+    box-shadow: inset -3px 3px 10px rgb(255, 255, 255),
+                inset 3px -3px 15px rgb(109, 105, 105);
+    border-bottom: 40px solid rgb(197, 197, 197);
+    top: 140px;
+    left: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.personagem.ouro .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: rgb(145, 151, 86);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 20px rgb(247, 245, 206),
+                inset 1px -1px 15px rgb(0, 0, 0);
+    border-bottom: 40px solid rgb(191, 192, 105);
+    top: 140px;
+    left: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.personagem.platina .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: rgb(196, 240, 243);
+    border: 2px solid rgb(168, 255, 251);
+    box-shadow: inset -2px 2px 5px rgb(31, 248, 255),
+                inset 1px -1px 8px rgb(27, 88, 146);
+    border-bottom: 40px solid rgb(89, 174, 180);
+    top: 140px;
+    left: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.personagem.ascendente .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: rgb(59, 135, 235);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: inset -2px 2px 10px lightgrey,
+                inset 1px -1px 15px black;
+    border-bottom: 40px solid rgb(84, 95, 245);
+    top: 140px;
+    left: 5px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.personagem.imortal .tronco {
+    position: absolute;
+    width: 160px;
+    height: 200px;
+    background-color: rgb(241, 57, 10);
+    border: 2px solid rgb(255, 57, 57);
+    box-shadow: inset -2px 2px 10px rgb(255, 115, 0),
+                inset 1px -1px 15px rgb(255, 94, 0);
+    border-bottom: 40px solid rgb(233, 12, 12);
+    top: 140px;
+    left: 5px;
+    border-radius: 30px 30px 0px 10px; 
+    z-index: 1;
+}
+
+.personagem.radiante .tronco {
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    background-color: rgb(224, 14, 224);
+    border: 2px solid rgb(231, 205, 255);
+    box-shadow: inset -2px 2px 10px rgb(246, 75, 252),
+                inset 1px -1px 15px rgb(255, 138, 249);
+    border-bottom: 40px solid rgb(143, 15, 248);
+    top: 140px;
+    left: 5px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.personagem.ferro .peitoEsquerdo, .personagem.ferro .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+    box-shadow: inset -2px 2px 10px rgb(182, 182, 182),
+                inset 1px -1px 15px black;
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.bronze .peitoEsquerdo, .personagem.bronze .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(163, 119, 25);
+    border: 2px solid rgb(196, 153, 13);
+    box-shadow: inset -2px 2px 5px rgb(236, 196, 108),
+                inset 1px -1px 8px rgb(177, 121, 0);
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.prata .peitoEsquerdo, .personagem.prata .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(167, 190, 190);
+    border: 2px solid rgb(224, 242, 243);
+    box-shadow: inset -2px 2px 10px rgb(255, 255, 255),
+                inset 1px -1px 15px rgb(128, 128, 128);
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.ouro .peitoEsquerdo, .personagem.ouro .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(145, 151, 86);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 20px rgb(240, 234, 117),
+                inset 3px -3px 5px rgb(0, 0, 0);
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.platina .peitoEsquerdo, .personagem.platina .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(196, 240, 243);
+    border: 2px solid rgb(168, 255, 251);
+    box-shadow: inset -2px 2px 5px rgb(31, 248, 255),
+                inset 1px -1px 8px rgb(27, 88, 146);
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.ascendente .peitoEsquerdo, .personagem.ascendente .peitoDireito {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    background-color: rgb(59, 135, 235);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: inset -2px 2px 10px rgb(169, 249, 255),
+                inset 1px -1px 15px rgb(50, 143, 155);
+    top: 150px;
+    border-radius: 10%;
+    z-index: 5;
+}
+
+.personagem.imortal .peitoEsquerdo, .personagem.imortal .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(241, 57, 10);
+    border: 2px solid rgb(211, 36, 36);
+    box-shadow: inset -2px 2px 10px rgb(255, 115, 0),
+                inset 1px -1px 15px rgb(255, 94, 0);
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.radiante .peitoEsquerdo, .personagem.radiante .peitoDireito {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(199, 14, 224);
+    border: 2px solid rgb(231, 205, 255);
+    box-shadow: inset -2px 2px 10px rgb(246, 75, 252),
+                inset 1px -1px 15px rgb(255, 138, 249);
+    top: 150px;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.ferro .peitoEsquerdo {
+    left: 25px;
+}
+
+.personagem.ferro .peitoDireito {
+    right: 30px;
+}
+
+.personagem.ouro .peitoEsquerdo {
+    left: 25px;
+}
+
+.personagem.ouro .peitoDireito {
+    right: 30px;
+}
+
+.personagem.ferro .gum, .personagem.ferro .gdois, .personagem.ferro .gtres, .personagem.ferro .gquatro, .personagem.ferro .gcinco, .personagem.ferro .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    box-shadow: inset -2px 2px 10px rgb(179, 179, 179),
+                inset 1px -1px 15px black;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.bronze .gum, .personagem.bronze .gdois, .personagem.bronze .gtres, .personagem.bronze .gquatro, .personagem.bronze .gcinco, .personagem.bronze .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(163, 119, 25);
+    border: 2px solid rgb(192, 150, 10);
+    box-shadow: inset -2px 2px 5px rgb(236, 196, 108),
+                inset 1px -1px 3px black;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.prata .gum, .personagem.prata .gdois, .personagem.prata .gtres, .personagem.prata .gquatro, .personagem.prata .gcinco, .personagem.prata .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(167, 190, 190);
+    border: 2px solid rgb(224, 242, 243);
+    box-shadow: inset -2px 2px 10px rgb(179, 179, 179),
+                inset 1px -1px 5px black;
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.ouro .gum, .personagem.ouro .gdois, .personagem.ouro .gtres, .personagem.ouro .gquatro, .personagem.ouro .gcinco, .personagem.ouro .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(145, 151, 86);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 20px rgb(240, 234, 117),
+                inset 3px -3px 5px rgb(0, 0, 0);
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.platina .gum, .personagem.platina .gdois, .personagem.platina .gtres, .personagem.platina .gquatro, .personagem.platina .gcinco, .personagem.platina .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(196, 240, 243);
+    border: 2px solid rgb(168, 255, 251);
+    box-shadow: inset -2px 2px 5px rgb(31, 248, 255),
+                inset 1px -1px 8px rgb(27, 88, 146);
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.ascendente .gum, .personagem.ascendente .gdois, .personagem.ascendente .gtres, .personagem.ascendente .gquatro, .personagem.ascendente .gcinco, .personagem.ascendente .gseis {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: rgb(59, 135, 235);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: inset -2px 2px 10px lightgrey,
+                inset 1px -1px 15px rgb(54, 121, 133);
+    border-radius: 10%;
+    z-index: 5;
+}
+
+.personagem.imortal .gum, .personagem.imortal .gdois, .personagem.imortal .gtres, .personagem.imortal .gquatro, .personagem.imortal .gcinco, .personagem.imortal .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(241, 57, 10);
+    border: 2px solid rgb(221, 38, 38);
+    box-shadow: inset -2px 2px 10px rgb(255, 115, 0),
+                inset 1px -1px 15px rgb(255, 94, 0);
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.personagem.radiante .gum, .personagem.radiante .gdois, .personagem.radiante .gtres, .personagem.radiante .gquatro, .personagem.radiante .gcinco, .personagem.radiante .gseis {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(189, 13, 243);
+    border: 2px solid rgb(231, 205, 255);
+    box-shadow: inset -2px 2px 10px rgb(246, 75, 252),
+                inset 1px -1px 15px rgb(255, 138, 249);
+    border-radius: 20%;
+    z-index: 5;
+}
+
+.gum, .gdois, .gtres {
+    left: 60px;
+}
+
+.gquatro, .gcinco, .gseis {
+    right: 65px;
+}
+
+.gum, .gquatro {
+    top: 220px;
+}
+
+.gdois, .gcinco {
+    top: 241px;
+}
+
+.gtres, .gseis {
+    top: 262px;
+}
+
+.personagem.ferro .bracoEsquerdo, .personagem.ferro .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 35px solid gray;
+    border-radius: 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.bronze .bracoEsquerdo, .personagem.bronze .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 35px solid rgb(143, 87, 15);
+    border-radius: 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.prata .bracoEsquerdo, .personagem.prata .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 35px solid rgb(208, 216, 216);
+    border-radius: 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.ouro .bracoEsquerdo, .personagem.ouro .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 40px solid rgb(155, 156, 73);
+    border-radius: 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.platina .bracoEsquerdo, .personagem.platina .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 35px solid rgb(137, 236, 243);
+    border-radius: 10px 10px 30px 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.ascendente .bracoEsquerdo, .personagem.ascendente .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 35px solid rgb(84, 110, 226);
+    border-radius: 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.imortal .bracoEsquerdo, .personagem.imortal .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 35px solid rgb(218, 53, 53);
+    border-radius: 30px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.personagem.radiante .bracoEsquerdo, .personagem.radiante .bracoDireito {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid rgb(246, 250, 188);
+    border-top: 35px solid rgb(140, 0, 255);
+    border-bottom: 15px solid rgb(18, 7, 82);
+    border-radius: 30px 30px 15px 15px;
+    top: 145px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 2;
+}
+
+.bracoEsquerdo {
+    left: -30px;
+    transform: rotate(10deg);
+    animation: bracom 2s ease infinite alternate;
+}
+
+@keyframes bracom {
+    100% {
+        transform: rotate(20deg);
+        left: -36px;
+    }
+}
+
+.bracoDireito {
+    left: 160px;
+    transform: rotate(-10deg);
+    animation: bracom2 2s ease infinite alternate;
+}
+
+@keyframes bracom2 {
+    100% {
+        transform: rotate(-95deg);
+        left: 200px;
+        top: 100px;
+    }
+}
+
+.personagem.ferro .pernaEsquerda, .personagem.ferro .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid gray;
+    border-bottom: 35px solid gray;
+    border-radius: 30px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.bronze .pernaEsquerda, .personagem.bronze .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid rgb(143, 87, 15);
+    border-bottom: 35px solid rgb(110, 68, 13);
+    border-radius: 30px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.prata .pernaEsquerda, .personagem.prata .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid rgb(191, 194, 194);
+    border-bottom: 35px solid rgb(75, 75, 75);
+    border-radius: 30px 30px 5px 5px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.ouro .pernaEsquerda, .personagem.ouro .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid rgb(155, 156, 73);
+    border-bottom: 35px solid rgb(155, 156, 73);
+    border-radius: 30px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.platina .pernaEsquerda, .personagem.platina .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid rgb(115, 224, 231);
+    border-bottom: 35px solid rgb(75, 69, 69);
+    border-radius: 30px 30px 0 0 ;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.ascendente .pernaEsquerda, .personagem.ascendente .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid rgb(49, 121, 204);
+    border-bottom: 35px solid rgb(21, 29, 148);
+    border-radius: 30px 30px 5px 5px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.imortal .pernaEsquerda, .personagem.imortal .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid black;
+    border-top: 80px solid rgb(214, 48, 48);
+    border-bottom: 35px solid rgb(136, 26, 26);
+    border-radius: 30px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.personagem.radiante .pernaEsquerda, .personagem.radiante .pernaDireita {
+    position: absolute;
+    width: 50px;
+    height: 130px;
+    background-color: rgb(238, 216, 187);
+    border: 3px solid rgb(238, 237, 202);
+    border-top: 80px solid rgb(168, 16, 238);
+    border-bottom: 35px solid rgb(40, 2, 255);
+    border-radius: 30px;
+    top: 320px;
+    box-shadow: inset 0 0 10px gray;
+    z-index: 0;
+}
+
+.pernaEsquerda {
+    left: 20px;
+}
+
+.pernaDireita {
+    right: 20px;
+}
+
+.personagem.ferro .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, silver, gray);
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.bronze .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, rgb(255, 145, 0), rgb(156, 119, 76));
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.prata .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, rgb(228, 231, 231), rgb(173, 180, 180));
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.ouro .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, rgb(227, 252, 5), rgb(226, 225, 150));
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.platina .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, rgb(0, 255, 255), rgb(88, 217, 221));
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.ascendete .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, silver, gray);
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.imortal .espada {
+    position: absolute;
+    width: 15px;
+    height: 180px;
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(255, 123, 0));
+    border-radius: 50% 50% 15% 15%;
+    top: 100px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 10px rgb(248, 99, 0);
+    border: 2px solid rgb(255, 74, 74);
+    z-index: 7;
+    animation: espadam 2s ease infinite alternate;
+}
+
+.personagem.radiante .espada {
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background:  rgb(234, 0, 255);
+    border-radius: 15% 15% 50% 50%;
+    top: 150px;
+    left: 180px;
+    transform: rotate(30deg);
+    box-shadow: 0 0 10px rgb(243, 145, 247);
+    border: 2px solid rgb(250, 249, 199);
+    z-index: 5;
+    animation: espadam3 2s ease infinite alternate;
+}
+
+@keyframes espadam {
+    0% {
+        top: 100px;
+        left: 250px;
+        background-color: rgba(0, 255, 255, 0.5);
+        z-index: 10;
+    } 100% {
+        top: 5px;
+        left: 330px;
+        background-color: rgba(0, 255, 255, 0.5);
+        z-index: 10;
+    }
+}
+
+@keyframes espadam3 {
+    0% {
+        top: 170px;
+        left: 210px;
+    } 100% {
+        top: -35px;
+        left: 280px;
+        background-color: rgba(0, 255, 255, 0.5);
+    }
+}
+
+.personagem.ferro .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(105, 99, 99);
+    border: 2px solid black;
+    border-radius: 20%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+.personagem.bronze .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(182, 97, 27);
+    border: 2px solid black;
+    border-radius: 20%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+.personagem.prata .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(190, 187, 187);
+    border: 2px solid black;
+    border-radius: 20%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+.personagem.ouro .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(145, 151, 86);
+    border: 2px solid rgb(235, 245, 181);
+    box-shadow: inset -2px 2px 20px rgb(240, 234, 117),
+                inset 3px -3px 5px rgb(0, 0, 0);
+    border-radius: 20%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+.personagem.platina .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(80, 180, 180);
+    border: 2px solid black;
+    border-radius: 40%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+.personagem.ascendete .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(105, 99, 99);
+    border: 2px solid black;
+    border-radius: 20%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+.personagem.imortal .espadaBainha {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(223, 23, 23);
+    border: 2px solid rgb(228, 101, 101);
+    border-radius: 20%;
+    z-index: 5;
+    left: 175px;
+    bottom: 60px;
+    animation: bainham 2s ease infinite alternate;
+}
+
+
+.personagem.radiante .espadaBainha {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background-color: rgb(183, 0, 255);
+    border: 2px solid rgb(236, 236, 187);
+    border-right: 12px double rgb(236, 236, 187);
+    border-radius: 20%;
+    left: 320px;
+    top: 135px;
+    transform: rotate(30deg);
+    animation: bainham3 2s ease infinite alternate;
+}
+
+@keyframes bainham3 {
+    0% {
+        top: 130px;
+        left: 220px;
+    } 100% {
+        top: -75px;
+        left: 290px;
+        background-color: rgba(0, 255, 255, 0.5);
+    }
+}
+
+@keyframes bainham {
+    100% {
+        bottom: 150px;
+        left: 250px;
+        transform: rotate(20deg);
+    }
+}
